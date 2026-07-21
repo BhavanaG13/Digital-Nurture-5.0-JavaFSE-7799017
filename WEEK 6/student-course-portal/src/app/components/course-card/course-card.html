@@ -1,0 +1,5 @@
+<div class="course-card" appHighlight (click)="onClick()">
+  <h3>{{ course.name }}</h3>
+  <p>Instructor: {{ course.instructor }}</p>
+  <p>{{ course.credits | creditLabel }}</p>
+</div>

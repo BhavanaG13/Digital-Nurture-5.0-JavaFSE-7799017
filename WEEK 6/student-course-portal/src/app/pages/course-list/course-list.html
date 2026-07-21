@@ -1,0 +1,21 @@
+<section class="course-list">
+  <h2>Available Courses</h2>
+
+  <input
+    type="text"
+    placeholder="Search courses..."
+    [(ngModel)]="searchTerm"
+    (ngModelChange)="filterCourses()"
+    class="search-box"
+  />
+
+  <div class="cards">
+    <app-course-card
+      *ngFor="let course of courses"
+      [course]="course"
+      (cardClick)="onCourseSelected($event)"
+    ></app-course-card>
+  </div>
+
+  <p *ngIf="courses.length === 0">No courses match your search.</p>
+</section>

@@ -1,0 +1,6 @@
+.enrollment-form { max-width: 420px; }
+label { display: block; margin-bottom: 1rem; }
+input { display: block; width: 100%; padding: 0.4rem; margin-top: 0.25rem; }
+.error { color: #c0392b; font-size: 0.85rem; }
+.success { color: #27ae60; margin-top: 1rem; }
+button { padding: 0.5rem 1.2rem; }

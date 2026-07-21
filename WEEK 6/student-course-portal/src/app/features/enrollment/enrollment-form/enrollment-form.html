@@ -1,0 +1,45 @@
+<section class="enrollment-form">
+  <h2>Enrollment Form (Template-Driven)</h2>
+
+  <form #enrollForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+    <label>
+      Name
+      <input
+        name="name"
+        [(ngModel)]="student.name"
+        #name="ngModel"
+        required
+        minlength="2"
+      />
+      <span class="error" *ngIf="name.invalid && name.touched">Name is required (min 2 characters).</span>
+    </label>
+
+    <label>
+      Email
+      <input
+        name="email"
+        type="email"
+        [(ngModel)]="student.email"
+        #email="ngModel"
+        required
+        email
+      />
+      <span class="error" *ngIf="email.invalid && email.touched">Enter a valid email.</span>
+    </label>
+
+    <label>
+      Course
+      <input
+        name="course"
+        [(ngModel)]="student.course"
+        #course="ngModel"
+        required
+      />
+      <span class="error" *ngIf="course.invalid && course.touched">Course is required.</span>
+    </label>
+
+    <button type="submit" [disabled]="enrollForm.invalid">Submit</button>
+  </form>
+
+  <p *ngIf="submitted" class="success">Enrollment submitted successfully!</p>
+</section>

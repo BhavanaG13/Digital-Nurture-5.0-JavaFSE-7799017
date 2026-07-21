@@ -1,0 +1,12 @@
+.course-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  background: #fff;
+  transition: box-shadow 0.2s ease;
+}
+.course-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}

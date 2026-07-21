@@ -1,0 +1,18 @@
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: #1e293b;
+  color: #fff;
+}
+.brand { font-weight: bold; font-size: 1.1rem; }
+nav a {
+  margin-left: 1rem;
+  color: #cbd5e1;
+}
+nav a.active {
+  color: #fff;
+  font-weight: bold;
+  border-bottom: 2px solid #38bdf8;
+}
